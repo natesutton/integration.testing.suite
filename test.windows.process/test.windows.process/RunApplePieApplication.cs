@@ -25,7 +25,7 @@ namespace test.windows.process
             myProcess.WaitForExit();
             myProcess.Close();
 
-            //Split overload method requires string arrary and StringSplitOptions
+            //Split overload method requires string array and StringSplitOptions
             string[] lines = output.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None);
 
             return lines[2];
