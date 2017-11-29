@@ -16,5 +16,16 @@ namespace test.windows.process
             Assert.AreEqual("Your apple pie requires 4.2 Cortland apples", RunApplePieApplication.Execute("7", "Cortland"));
         }
 
+        [TestCase]
+        public void NumberOfMcIntonshApplesFor5Cups()
+        {
+            Assert.AreEqual("Your apple pie requires 6.25 McIntosh apples", RunApplePieApplication.Execute("5", "McIntosh"));
+        }
+
+        [TestCase]
+        public void ThisTestWillFail()
+        {
+            Assert.AreEqual("Output Text will not match", RunApplePieApplication.Execute("5", "McIntonsh"));
+        }
     }
 }
